@@ -48,10 +48,9 @@
                 <!-- Logo -->
                 <!-- ============================================================== -->
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="{% static 'index.html' %}">
+                    <a class="navbar-brand" href="index.html">
                         <!-- Logo icon --><b>
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
-                            
                             <!-- Light Logo icon -->
                             <img src="{% static 'assets/images/logo-light-icon.png' %}" alt="homepage" class="light-logo" />
                         </b>
@@ -87,7 +86,12 @@
                         <!-- Profile -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/users/1.jpg" alt="user" class="profile-pic m-r-10" />Markarn Doe</a>
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" 
+                            href="{% static '/templates/registration/login.html' %}" data-toggle="dropdown"
+                             aria-haspopup="true" aria-expanded="false">
+                            
+                             <img src="{% static 'assets/images/users/1.jpg' %}" alt="user" 
+                            class="profile-pic m-r-10" />Markarn Doe</a>
                         </li>
                     </ul>
                 </div>
@@ -131,7 +135,7 @@
             <div class="sidebar-footer">
                 <!-- item--><a href="" class="link" data-toggle="tooltip" title="Settings"><i class="ti-settings"></i></a>
                 <!-- item--><a href="" class="link" data-toggle="tooltip" title="Email"><i class="mdi mdi-gmail"></i></a>
-                <!-- item--><a href="" class="link" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a> </div>
+                <!-- item--><a href="/accounts/logout/" class="link" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a> </div>
             <!-- End Bottom points-->
         </aside>
         <!-- ============================================================== -->
