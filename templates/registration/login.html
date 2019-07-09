@@ -33,11 +33,11 @@
                             {% csrf_token %}
                             <div class="form-label-group">
                                 <!-- adicionar / alterar vários atributos-->
-                                {{form.username | attr:"class:form-control" | attr:"placeholder: Usuário" }}
+                                {{form.username  | attr:"placeholder: Usuário" | attr:"class:form-control"}}
                             </div>
                             <div class="form-label-group">
                                 <!-- adicionar / alterar vários atributos-->
-                                {{form.password | attr:"class:form-control" |attr:"placeholder: Password" }}
+                                {{form.password |  attr:"placeholder: Password" | attr:"class:form-control"}}
                             </div>
                             <div class="custom-control custom-checkbox mb-3">
                                 <input type="checkbox" class="custom-control-input" id="customCheck1">
