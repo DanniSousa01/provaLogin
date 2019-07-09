@@ -9,6 +9,7 @@ def home(request):
 def login_list(request):
     users = User.objects.all()
     return render (request, 'users/list.html', {'users': users})
+
 def login_delete(request):
     user = User.objects.get( pk = user_id)
     user.delete()
