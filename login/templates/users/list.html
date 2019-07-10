@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% block daniela %}
-
+{% endblock %}
 <!-- ============================================================== -->
 <!-- Start Page Content -->
 <!-- ============================================================== -->
+{% block list %}
 <div class="row">
     <!-- column -->
     <div class="col-lg-12">
@@ -22,17 +23,16 @@
                 </tr>
               </thead>
               <tbody>
-                {% for users in users %}
-                <tr>
-                  <td>{{users.name}}</td>
-                  <td>{{users.email}}</td>
-                  <td>{{users.first_name}}</td>
-                  <td>{{users.last_name}}</td>
-                  <td>
-                    <a href="/login/delete/{{login.id}}"> Excluir </a>
-                  </td>
-                </tr>
-                {% endfor %}
+                  {% for user in users %}
+                  <tr>
+                      <th>{{user.username}}</th>
+                      <td>{{user.email}}</td>
+                      <td>{{user.first_name}}</td>
+                      <td>{{user.last_name}}</td>
+                      
+                      <td>EXCLUIR</td>
+                  </tr>
+                  {% endfor %}
               </tbody>
             </table>
           </div>
